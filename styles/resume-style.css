@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font-family: Montserrat, serif;
+  color: #8c6046;
+}
+.wrapper {
+  min-width: 30rem;
+  max-width: 95rem;
+  margin: auto;
+  padding: auto;
+}
+hr {
+  background-color: #646a5e;
+  min-width: 30rem;
+}
+
+/*Basic Info*/
+.basic-info {
+  text-align: center;
+  min-width: 30rem;
+}
+
+.basic-info h1 {
+  font-size: 3rem;
+  margin-bottom: 0.1rem;
+}
+.basic-info p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.basic-info a {
+  text-decoration: none;
+  color: #000;
+}
+/*EDUCATION*/
+.container * {
+  margin: 0 0 0.3rem 0;
+  padding: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 30rem;
+}
+
+.heading {
+  font-size: 1.4rem;
+  grid-column: span 2;
+}
+.sub-heading {
+  padding: 0.2rem 0.2rem 0rem 0.2rem; 
+  font-weight: 500;
+  background-color: #cdd5c6;;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.detail-right {
+  text-align: right;
+}
+.detail-left {
+  grid-column: span;
+}
+.extra-details {
+  grid-column: span 2;
+  padding-left: 1.5rem;
+}
+.no-bg{
+  background-color: transparent;
+}
+
+/*Core Competencies*/
+.competencies-list {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+  min-width: 30rem;
+}
+.list-span{
+  grid-row: span 2;
+}
+/*Awards and Certification*/
+.cert-list {
+  margin: 0;
+  padding: 0 0 0 1.3rem;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
+  gap: 0.5rem
+}
+
+.cert-list *{
+  margin: 0;
+  padding: 0;
+}
+/*Footer*/
+footer{
+  text-align: center;
+}
+footer p{
+  margin:0;
+  padding: 0;
+}
+
+@media (max-width: 870px){
+  .cert-list{
+    grid-template-rows: repeat(8, auto);
+  }
+}
+@media (max-width: 520px){
+  .cert-list{
+  grid-template-columns: 95%;
+  grid-template-rows: repeat(15, auto);
+  }
+}
