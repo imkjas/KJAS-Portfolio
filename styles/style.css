@@ -118,6 +118,7 @@ a {
 }
 .comp-plant {
   width: 90%;
+  aspect-ratio: 8/9;
 }
 
 /*ABOUT*/
@@ -147,6 +148,9 @@ a {
   height: clamp(40px, 8vh, 50px);
 }
 
+
+/*MEDIA QUERIES*/
+
 @media (max-width: 1400px) {
   .hero-container {
     height: clamp(900px, 70vh, 1100px);
@@ -175,6 +179,19 @@ a {
   }
   .hero-content {
     max-width: 100%;
+  }
+}
+@media (max-width: 530px) {
+  .nav-container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+  }
+  .logo{
+    text-align: center;
+  }
+  .nav-bar {
+    text-align: center;
   }
 }
 @media (max-width: 340px) {
