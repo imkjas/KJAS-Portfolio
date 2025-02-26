@@ -146,8 +146,166 @@ a {
 
 .break-vine {
   height: clamp(40px, 8vh, 50px);
+  padding-bottom: clamp(100px, 10vh, 150px);
 }
 
+/*SKILLS*/
+.skills {
+  text-align: center;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(200px, 30%, 500px));
+  justify-content: space-around;
+  margin: min(3rem, 15%) 0;
+}
+.skill {
+  text-align: left;
+  background-color: var(--color-dark-brown);
+  border-radius: 20px;
+  padding: min(1rem, 10%);
+  display: grid;
+  grid-template-columns: clamp(20px, 6vh, 5rem) auto;
+  grid-template-rows: clamp(20px, 6vh, 5rem) auto;
+}
+.title {
+  max-width: min-content;
+  padding-inline: min(1rem, 10%);
+  font-size: clamp(20px, 2vw, 1.5rem);
+  font-weight: 600;
+  color: var(--color-light-cream);
+}
+.skills h2 {
+  font-size: clamp(24px, 3.5vw, 3.5rem);
+  font-weight: 600;
+  color: var(--color-dark-green);
+}
+
+.icon {
+  background-color: var(--color-light-green);
+  border-radius: 15px;
+}
+.icon img{
+  max-width: 100%;
+}
+
+.detail {
+  grid-column: span 2;
+  font-size: clamp(16px, 1.5vw, 1.3rem);
+  line-height: clamp(22px, 2.2vw, 2.3rem);
+  color: var(--color-light-cream);
+  font-weight: 200;
+  padding-top: min(1rem, 10%);
+  padding-bottom: min(1rem, 10%);
+}
+
+/*Project*/
+.projects {
+  text-align: center;
+}
+.projects h2 {
+  font-size: clamp(24px, 3.5vw, 3.5rem);
+  color: var(--color-dark-brown);
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(200px, 30%, 500px));
+  justify-content: space-around;
+  margin: min(4rem, 10vh) 0;
+}
+
+.project {
+  background-color: var(--color-light-green);
+  border: clamp(16px, 2.5vw, 1rem) solid var(--color-dark-green);
+  border-bottom: 2rem solid var(--color-mid-green);
+  height: clamp(230px, 30vw, 500px);
+  border-radius: 55% 55% 0 0;
+  margin-bottom: clamp(20px, 3vw, 2.5rem);
+  color: var(--color-light-cream);
+  align-content: center;
+}
+
+.project:hover {
+  background-color: var(--color-light-cream);
+  border: clamp(16px, 2.5vw, 1rem) solid var(--color-dark-brown);
+  border-bottom: 2rem solid var(--color-mid-brown);
+  color: var(--color-mid-green);
+}
+.project:hover .proj-title {
+  color: var(--color-mid-green); /* Ensure text color changes on hover */  
+}
+.proj-title {
+  width: 70%;
+  margin-inline: auto;
+  padding-inline: min(1rem, 10%);
+  font-size: clamp(20px, 2vw, 2rem);
+  font-weight: 600;
+  padding-top: min(5rem, 20%);;
+}
+h4.description{
+  width: 80%;
+  margin-inline: auto;
+  font-weight: 400;
+  font-size: clamp(12px, 1vw, 1rem);
+}
+/*CONTACT*/
+.contact {
+  padding: 0 min(3rem, 10%);
+  height: min(900px, 100vh);
+  background-image: url("/images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
+.contact-content h2 {
+  color: var(--color-dark-brown);
+  font-size: clamp(28px, 3.5vw, 3rem);
+  font-weight: 600;
+  text-align: center;
+  margin: min(6vh, 25px) auto;
+}
+.contact-container {
+  grid-area: 1 / 3;
+}
+
+.content-container {
+  background-color: var(--color-mid-brown);
+  color: var(--color-light-cream);
+  width: 90%;
+  height: max-content;
+  border-radius: 20px;
+  padding: min(2rem, 15%);
+  display: grid;
+  grid-template-columns: 20% auto;
+}
+.contact-container a {
+  color: var(--color-light-cream);
+  font-size: clamp(14px, 2vw, 1.1rem);
+}
+#contact > div > div > h3 {
+  font-size: clamp(20px, 2vw, 1.5rem);
+  margin-bottom: min(6vh, 25px);
+  font-weight: 500;
+  grid-column: span 2;
+}
+/*FOOTER*/
+
+footer {
+  background-color: var(--color-light-green);
+  color: var(--color-dark-brown);
+  text-align: center;
+  padding: min(0.8rem, 5%) 0;
+}
+footer h5 {
+  font-size: clamp(12px, 1vw, 0.9rem);
+  font-weight: 400;
+}
+footer p {
+  font-size: clamp(12px, 1vw, 0.9rem);
+  font-weight: 400;
+}
 
 /*MEDIA QUERIES*/
 
@@ -180,6 +338,33 @@ a {
   .hero-content {
     max-width: 100%;
   }
+  .skills-container {
+    margin: min(3rem, 15%) auto;
+    width: clamp(250px, 70vw, 800px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skill {
+    height: max-content;
+
+    margin-bottom: min(3rem, 15%);
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, clamp(200px, 45%, 410px));
+    justify-content: space-around;
+    margin: min(4rem, 10vh) 0;
+  }
+  .project {
+    background-color: var(--color-light-green);
+    height: clamp(230px, 30vw, 500px);
+    border-radius: 55% 55% 0 0;
+    border: clamp(16px, 2.5vw, 1rem) solid var(--color-dark-green);
+    border-bottom: 2rem solid var(--color-mid-green);
+    margin-bottom: clamp(20px, 3vw, 2.5rem);
+  }
 }
 @media (max-width: 530px) {
   .nav-container {
@@ -187,7 +372,7 @@ a {
     grid-auto-flow: row;
     justify-content: center;
   }
-  .logo{
+  .logo {
     text-align: center;
   }
   .nav-bar {
