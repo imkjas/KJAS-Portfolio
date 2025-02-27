@@ -184,7 +184,7 @@ a {
 
 .icon {
   background-color: var(--color-light-green);
-  border-radius: 15px;
+  border-radius: min(15px, 2vw);
   padding: 0.2rem;
 }
 .icon img {
