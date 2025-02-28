@@ -30,6 +30,14 @@ html {
 a {
   text-decoration: none;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* This ensures the sections take the full width of the container */
+  gap: 20px; /* Add spacing between the sections */
+}
+
 .wrapper {
   max-width: min(100%, 1550px);
   margin-inline: auto;
@@ -166,9 +174,10 @@ a {
   border-radius: 20px;
   padding: min(1rem, 10%);
   display: grid;
-  grid-template-columns: clamp(20px, 6vh, 5rem) auto;
-  grid-template-rows: clamp(20px, 6vh, 5rem) auto;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
 }
+
 .title {
   max-width: min-content;
   padding-inline: min(1rem, 10%);
@@ -186,9 +195,13 @@ a {
   background-color: var(--color-light-green);
   border-radius: min(15px, 2vw);
   padding: 0.2rem;
+  max-width: 60px;
+  max-height: 60px;
 }
 .icon img {
+  margin: auto auto;
   max-width: 100%;
+  aspect-ratio: 1;
 }
 
 .detail {
@@ -357,7 +370,7 @@ footer p {
     height: min(30vh, 350px);
   }
   .hero-content {
-    max-width: 100%;
+    max-width: 95%;
   }
   .skills-container {
     margin: min(3rem, 15%) auto;
@@ -483,8 +496,16 @@ footer p {
 @media (max-width: 340px) {
   .hero-container {
     height: clamp(700px, 80vh, 900px);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  }
+  .hero-content h1 {
+    font-size: clamp(22px, 2.5vw, 2.5rem);
+    font-weight: 700;
+  }
+  .hero-content h2 {
+    font-size: clamp(18px, 2vw, 1.5rem);
+    font-weight: 500;
+  }
+  .hero-content p {
+    font-size: clamp(14px, 1vw, 1rem);
   }
 }
