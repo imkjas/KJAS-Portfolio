@@ -272,7 +272,7 @@ h4.description {
 .contact {
   padding: 0 min(3rem, 10%);
   height: clamp(400px, 70vh, 1000px);
-  background-image: url("/images/bg.png");
+  background-image: url("https://imkjas.github.io/KJAS-Portfolio/images/bg.png");
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
