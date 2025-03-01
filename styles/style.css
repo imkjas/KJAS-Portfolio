@@ -279,6 +279,7 @@ h4.description {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
+  margin-bottom: -25px;
 }
 .contact-content h2 {
   color: var(--color-dark-brown);
@@ -292,9 +293,10 @@ h4.description {
 }
 
 .content-container {
+  overflow: hidden;
   background-color: var(--color-mid-brown);
   color: var(--color-light-cream);
-  max-width: 90%;
+  width: clamp(200px, 90%, 400px);
   height: max-content;
   border-radius: 20px;
   padding: clamp(10px, 2vh, 2rem);
@@ -406,7 +408,7 @@ footer p {
     padding-top: min(3rem, 15%);
   }
   .contact {
-    background-image: url("/images/bg.png");
+    background-image: url("https://imkjas.github.io/KJAS-Portfolio/images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     grid-template-columns: 1fr 1fr;
@@ -418,7 +420,7 @@ footer p {
     font-size: clamp(16px, 2vw, 1.8rem);
   }
   .contact-container a {
-    font-size: clamp(12px, 1.2vw, 1.2rem);
+    font-size: clamp(11px, 1.2vw, 1.2rem);
   }
 }
 
@@ -505,6 +507,9 @@ footer p {
   }
   .nav-bar {
     text-align: center;
+  }
+  .contact-content {
+    margin-inline: auto;
   }
 }
 @media (max-width: 340px) {
