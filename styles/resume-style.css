@@ -30,7 +30,11 @@ hr {
 }
 .basic-info a {
   text-decoration: none;
-  color: #000;
+  color: #8c6046;
+}
+.basic-info a:hover {
+  text-decoration: none;
+  color: #646a5e;
 }
 /*EDUCATION*/
 .container * {
@@ -48,9 +52,9 @@ hr {
   grid-column: span 2;
 }
 .sub-heading {
-  padding: 0.2rem 0.2rem 0rem 0.2rem; 
+  padding: 0.2rem 0.2rem 0rem 0.2rem;
   font-weight: 500;
-  background-color: #cdd5c6;;
+  background-color: #cdd5c6;
   grid-column: span 2;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -65,7 +69,7 @@ hr {
   grid-column: span 2;
   padding-left: 1.5rem;
 }
-.no-bg{
+.no-bg {
   background-color: transparent;
 }
 
@@ -81,7 +85,7 @@ hr {
   padding: 0;
   min-width: 30rem;
 }
-.list-span{
+.list-span {
   grid-row: span 2;
 }
 /*Awards and Certification*/
@@ -91,33 +95,33 @@ hr {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(5, auto);
-  gap: 0.5rem
+  gap: 0.5rem;
 }
 
-.cert-list *{
+.cert-list * {
   margin: 0;
   padding: 0;
 }
 /*Footer*/
-footer{
+footer {
   text-align: center;
 }
-footer p{
-  margin:0;
+footer p {
+  margin: 0;
   padding: 0;
 }
 
-@media (max-width: 870px){
-  .cert-list{
+@media (max-width: 870px) {
+  .cert-list {
     grid-template-rows: repeat(8, auto);
   }
 }
-@media (max-width: 520px){
-  .cert-list{
-  grid-template-columns: 95%;
-  grid-template-rows: repeat(15, auto);
+@media (max-width: 520px) {
+  .cert-list {
+    grid-template-columns: 95%;
+    grid-template-rows: repeat(15, auto);
   }
-  .competencies-list{
-  grid-template-columns: 95%;
+  .competencies-list {
+    grid-template-columns: 95%;
   }
 }

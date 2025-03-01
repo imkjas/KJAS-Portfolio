@@ -34,8 +34,8 @@ a {
 .main {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* This ensures the sections take the full width of the container */
-  gap: 20px; /* Add spacing between the sections */
+  align-items: stretch;
+  gap: 20px;
 }
 
 .wrapper {
@@ -251,7 +251,7 @@ a {
   color: var(--color-mid-green);
 }
 .project:hover .proj-title {
-  color: var(--color-mid-green); /* Ensure text color changes on hover */
+  color: var(--color-mid-green);
 }
 .proj-title {
   max-width: 70%;
@@ -382,7 +382,6 @@ footer p {
   }
   .skill {
     height: max-content;
-
     margin-bottom: min(3rem, 15%);
   }
   .projects-container {
@@ -398,6 +397,9 @@ footer p {
     border: clamp(16px, 2.5vw, 1rem) solid var(--color-dark-green);
     border-bottom: 1.5rem solid var(--color-mid-green);
     margin-bottom: clamp(20px, 3vw, 2.5rem);
+  }
+  .project:hover {
+    border-bottom: 1.5rem solid var(--color-mid-brown);
   }
   .proj-title {
     max-width: 85%;
@@ -422,7 +424,7 @@ footer p {
 
 @media (min-width: 656px) {
   .carousel-button {
-    display: none; /* Hide buttons on screens above 640px */
+    display: none;
   }
 }
 
@@ -452,6 +454,14 @@ footer p {
     overflow: hidden;
   }
 
+  .proj-title {
+    font-size: clamp(24px, 3.5vw, 2rem);
+  }
+
+  h4.description {
+    font-size: clamp(12px, 2.5vw, 1.2rem);
+  }
+
   .carousel-button {
     position: absolute;
     display: flex;
@@ -467,6 +477,10 @@ footer p {
     background-color: var(--color-accent-red);
   }
   .carousel-button a:hover {
+    background-color: var(--color-dark-brown);
+  }
+
+  .carousel-nav.active {
     background-color: var(--color-dark-brown);
   }
 
