@@ -51,6 +51,7 @@ a {
   grid-auto-flow: column;
   align-items: center;
   padding: min(0.5rem, 5%) min(1rem, 10%);
+  margin-bottom: -20px;
 }
 .logo {
   font-size: 2rem;
